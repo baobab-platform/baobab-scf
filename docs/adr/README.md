@@ -1,17 +1,17 @@
-<!-- Target path: baobab-platform/engine-template/docs/adr/README.md (becomes <new-repo>/docs/adr/README.md in any repo created from this template). -->
+# Baobab Supply Chain Finance — Architecture Decision Records
 
-# ADRs
+Engine-local decisions belong here. Shared remains the authority for cross-engine contracts, capability namespace registration, producer activation, cross-engine references and Control Plane provider resolution. A local SCF ADR does not grant financial-services permissions or funder authority.
 
-Ecosystem-level decisions (new engines, cross-repo contract changes, org-wide
-tooling like this template) are recorded centrally as numbered ADRs in
-`baobab-platform/shared/docs/adr/`, continuing that repo's existing sequence — not
-here. This engine's own scaffolding decision (its addition to the ecosystem)
-should have an entry there; see `README.md`'s "ADR-000N" reference.
+| ADR | Status | Decision |
+|---|---|---|
+| [ADR-SCF-0001](ADR-SCF-0001%20%E2%80%94%20Supply%20Chain%20Finance%20Mission%20Authority%20and%20Partner-Led%20Financing.md) | **Proposed** | Supply Chain Finance mission, legal/financial authority, evidence, partner-led execution and implementation gates |
 
-Whether *this repo* should also keep repo-local ADRs for engine-internal
-decisions (as opposed to ecosystem-level ones) is not yet a settled
-convention — `baobab-platform/shared`'s governance strategy flags "is
-`baobab-platform/shared/docs/adr/` meant to be the single ADR log for the whole org,
-or just for contract-schema decisions specifically?" as still open. Until
-that's resolved, don't assume this folder is the right place for a
-repo-local decision log — check with whoever owns that governance doc first.
+## Precedence and status
+
+- [Shared](https://github.com/baobab-platform/shared) controls canonical capability names, registration, event schemas and reference semantics. No new `scf.*` domain is authorised by ADR-SCF-0001.
+- [Control Plane](https://github.com/baobab-platform/baobab-cp) controls legal-entity/tenant context, provider certification/registration, binding, entitlement and activation.
+- [IAM](https://github.com/baobab-platform/baobab-iam) authenticates people and service workloads.
+- [ERP](https://github.com/baobab-platform/baobab-erp), [Trade](https://github.com/baobab-platform/baobab-trade), [Trade Docs](https://github.com/baobab-platform/baobab-trade-docs) and [TMS](https://github.com/baobab-platform/baobab-tms) retain their accepted business authority.
+- Actual lending/servicing/credit decision/disbursement legality depends on relevant authorised external institutions, contractual arrangements and market-specific law.
+
+This repository remains architecture/scaffold stage. No SCF runtime, financing provider support, credit authority or production acceptance has been demonstrated.
