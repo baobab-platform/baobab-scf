@@ -60,7 +60,7 @@ Inventory count alone as collateral, mutable warehouse receipt, ledger token as 
 ## 7. Review triggers
 Warehouse receipt law, collateral registry, cross-border storage, tokenised collateral, external inspector or commodity mix change. A source scheme's genuine availability, not architecture, is activation prerequisite.
 
-## 9. Common governance and implementation evidence
+## 8. Common governance and implementation evidence
 
 Every market/product extension requires a verifiable legal-role assessment under ADR-SCF-0003; CP context and IAM user/workload trust; versioned Shared cross-engine source references (ERP financial truth, Trade commerce, Trade Docs evidence, TMS physical facts, Regulations where contracted); exact funder consent/offer and financial rights; Payments/external bank source payment observations; and no SCF shadow ledger. No new SCF or finance capability/event is registered by this local ADR. A funder sandbox is not evidence of production certification.
 

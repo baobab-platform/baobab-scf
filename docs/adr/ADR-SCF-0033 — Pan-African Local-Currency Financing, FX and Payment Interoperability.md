@@ -58,7 +58,7 @@ Expired currency quote after financing acceptance, disbursement to different cur
 ## 7. References and revision
 [PAPSS participation model](https://papss.com/about-us/), [PAPSS settlement process](https://papss.com/how-it-works/), [Baobab Payments](https://github.com/baobab-platform/baobab-payments/tree/main/docs/adr). Review anew on real market availability, new rail, currency risk or law change.
 
-## 9. Cross-cutting implementation and review protocol
+## 8. Cross-cutting implementation and review protocol
 
 IAM-authenticated principal and caller-bound CP tenant/legal entity/market context precede all cases, partner actions and data disclosures. Use source-owned cross-engine references, immutable external observations, source time/revision, purpose-scoped permissions, safe idempotency and reconciliation for UNKNOWN outcomes. Never treat funder approval, instrument issuance, received bank money, accounting balance and regulatory permission as the same status. Shared alone governs canonical capability/event semantics; CP/EA-09 registers and certifies only proven provider scopes.
 
