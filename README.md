@@ -45,3 +45,11 @@ Start with the independent gates in ADR-SCF-0001: SCF-FND-00, SCF-TECH-01, SCF-D
 First acceptance uses synthetic funds and a simulated funder. Real financing cannot be represented as active without validated legal, partner, contract, capability and operations proof.
 
 Security reports: [SECURITY.md](SECURITY.md). Contribution standards: [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Complete SCF architecture programme — proposed
+
+The [SCF ADR register](docs/adr/README.md) now lists **35 numbered decisions**: existing Proposed ADR-SCF-0001 and new Proposed ADR-SCF-0002 through ADR-SCF-0035. Every new ADR includes scoped architecture, authority, failure semantics, implementation gates and review/change triggers. ADR-SCF-0030..0035 preserve **future-conditional** opportunities (multi-funder distribution, agricultural/inclusive finance, sustainability, local-currency FX, digital collateral and optional separately licensed lending), not currently authorised product support.
+
+[SCF-TECH-01](docs/architecture/SCF-TECH-01%20%E2%80%94%20Headless%20Self-Hosted%20Financing%20Orchestration%20Runtime%20and%20Build-Adopt%20Strategy.md) is a **separate Proposed** headless/self-hosted technology decision favouring an executable Python 3.14 / Django 6.0 / PostgreSQL 17 spike; Go/PostgreSQL remains a same-stack comparator. No new banking-core JVM stack, finance service, licensed lender, funder contract or real money processing is selected or implemented.
+
+**Implementation order:** approve legal/partner roles → finalise canonical case/evidence/claim architecture → choose/prove minimal runtime → Shared capability census and contracts → simulated buyer-approved payable or factoring case → qualified partner sandbox → independent market, security, business and EA-09/CP admission. Keep provider, product, market and legal-entity support individually certified.
