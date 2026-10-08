@@ -43,7 +43,7 @@ flowchart LR
 A product profile pins technique, terms vocabulary, fee basis, permitted currencies, advance/discount parameters, recourse, affected legal entities/markets, provider capability matrix, policy version, eligibility facts, mandatory documents, data-sharing limits, disclosure/consent, and lifecycle template. Configure as **reviewed rules, not arbitrary tenant scripting**. Future additions require schema-evolution conformance and cross-owner authority review; do not mutate historical case product versions after programme upgrade.
 
 ## 5. Alternative decisions
-Reject a universal \`Loan\` aggregate, one generic interest formula, marketplace routing before funder onboarding, any product that demands platform escrow by default, and a user-selected "Financing type" string that bypasses provider/market eligibility. Commercial SaaS billing, referral compensation, transaction fees and funder revenue-sharing are distinct business/legal arrangements, not assumed rights.
+Reject a universal `Loan` aggregate, one generic interest formula, marketplace routing before funder onboarding, any product that demands platform escrow by default, and a user-selected "Financing type" string that bypasses provider/market eligibility. Commercial SaaS billing, referral compensation, transaction fees and funder revenue-sharing are distinct business/legal arrangements, not assumed rights.
 
 ## 6. Independent implementation gates
 | Gate | Objective exit evidence |

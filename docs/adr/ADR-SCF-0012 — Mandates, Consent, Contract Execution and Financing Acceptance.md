@@ -58,7 +58,7 @@ Global consent=true, clickwrap legally valid everywhere, provider email regarded
 ## 8. Revision trigger
 New signatory regime, financing contracts, future electronic transferable instrument or digital signature standard.
 
-## 8. Platform-wide implementation constraints
+## 9. Platform-wide implementation constraints
 
 All case actions require IAM identity plus redeemed CP caller-bound tenant/legal entity and scope; no bare tenant/provider header authorises access. Keep separate immutable occurred/observed/recorded timestamps, source digests, cross-engine pinned references, audit and idempotent outbox/inbox when implemented. UNKNOWN external side effects must be reconciled, not retried blindly. Preserve maker/checker and funder independence where legally or contractually required. Data disclosure is purpose-minimised; provider callback identity must be verified, not trusted based on URL.
 

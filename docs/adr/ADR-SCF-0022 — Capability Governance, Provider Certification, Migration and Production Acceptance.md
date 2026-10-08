@@ -62,7 +62,7 @@ The first slice uses simulated funder and synthetic financial flows; then approv
 ## 7. Revision triggers
 New Shared EA-09 rules, supported first partner/product, changed market law or controlled internal finance programme requires a formally accepted staged amendment.
 
-## 9. Review, evidence and compatibility protocol
+## 8. Review, evidence and compatibility protocol
 
 Keep an ADR conformance index linking each normative statement to future source paths, unit/contract/negative tests, legal-review evidence, provider protocol version, failure/reconciliation runbook and known unsupported conditions. Any changed accepted contract or market assumption must be dated and explicitly reviewed; preserve historical financing submissions and accepted external agreements, not overwrite them. No direct writes to foreign authority databases and no unregistered finance/SCF events.
 

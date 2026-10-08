@@ -51,7 +51,7 @@ An obligation can support multiple possible applications only under explicit pro
 Illustrative SCF-local commands: create-case, attach-evidence, submit-funder-application, accept-offer-intent, record-third-party-acceptance, reconcile-funding. Candidate events and capability names **not canonical** until Shared reviews stewardship and contract. A command is not an outcome: external partner receipt is not approval, approval is not funding, funding is not final settlement.
 
 ## 6. Failure and rejected shortcuts
-Unknown external partner result, same event ID/different digest, invoice partially credited, offer expiry between consent and callback, cross-tenant reference and dual offer accept race must be explicit. Reject one mutable \`status\` string, a single universal "loan" root, inferred loan account based on case ID and last-write-wins funder webhooks.
+Unknown external partner result, same event ID/different digest, invoice partially credited, offer expiry between consent and callback, cross-tenant reference and dual offer accept race must be explicit. Reject one mutable `status` string, a single universal "loan" root, inferred loan account based on case ID and last-write-wins funder webhooks.
 
 ## 7. Independent implementation gates
 | Gate | Evidence |
@@ -65,7 +65,7 @@ Unknown external partner result, same event ID/different digest, invoice partial
 ## 8. Revision triggers
 Review if portfolio servicing, multi-funder participation or securitisation requires new aggregate boundaries; do not rewrite core IDs. Retain ADR-SCF-0001 authority and use [Shared cross-engine reference semantics](https://github.com/baobab-platform/shared/tree/main/contracts/cross-engine-reference/v1).
 
-## 8. Non-negotiable cross-engine controls and acceptance
+## 9. Non-negotiable cross-engine controls and acceptance
 
 SCF must authenticate caller via IAM and redeem caller-bound CP context, authorise each source object/counterparty and store tenant/legal-entity scope in durable state and workers. Exact external references remain source-owned; no direct writes to ERP, Trade, Payments, Trade Docs, TMS, Regulations or partner databases. Sensitive evidence is purpose-minimised, encrypted, auditable and non-replicated across sibling tenants. Provider callbacks are independently authenticated, replay-safe and provenance-bearing; an HTTP acknowledgement is not funding. Canonical `financing.*` or `scf.*` keys and events are **illustrative until Shared-approved** and must never be declared as implemented or active by merging this ADR.
 

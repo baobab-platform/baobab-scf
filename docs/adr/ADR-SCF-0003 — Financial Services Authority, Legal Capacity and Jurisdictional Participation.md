@@ -43,7 +43,7 @@ flowchart TD
 A permission is **time-, activity-, organisation-, market- and programme-scoped**. The system records external register evidence/licence status and verification time but does not certify the licence independently. If licensing, sanctions designation, partner mandate or product perimeter changes, close new applications, preserve existing rights/historical cases and route impacted cases to legal/partner review. Future subsidiaries are autonomous; Nabhold parent affiliation does not confer finance authority on ZuriBeans or Thamani.
 
 ## 5. Alternatives rejected
-Reject a binary \`licensed=true\`, global "Africa eligible" flag, SCF admin granting itself permission to lend, one market's law copied to another, case acceptance used as legal contractual acceptance, and connecting to payment operator without appropriate onboarding.
+Reject a binary `licensed=true`, global "Africa eligible" flag, SCF admin granting itself permission to lend, one market's law copied to another, case acceptance used as legal contractual acceptance, and connecting to payment operator without appropriate onboarding.
 
 ## 6. Independent implementation gates
 | Gate | Proof |

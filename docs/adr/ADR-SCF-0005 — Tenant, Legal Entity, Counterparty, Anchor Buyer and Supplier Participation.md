@@ -26,12 +26,12 @@ Each SCF case belongs to an **independently entitled tenant and contracting lega
 | Borrower/Obligor | Liable party under exact legal agreement | Cannot infer from invoiced recipient or creator role |
 
 ## 3. Relationship and party identity
-Introduce \`ProgrammeParticipation\` with scoped canonical organisation, role, business relationship, product, market/corridor, currency, limits, valid_from/to, consent/contract references, risk/qualification status and revocation history. Legal relationships can differ: invoice debtor vs purchaser vs parent; supplier vs assignee vs borrower. Entity may play multiple roles but the relationship must be explicit per case/contract.
+Introduce `ProgrammeParticipation` with scoped canonical organisation, role, business relationship, product, market/corridor, currency, limits, valid_from/to, consent/contract references, risk/qualification status and revocation history. Legal relationships can differ: invoice debtor vs purchaser vs parent; supplier vs assignee vs borrower. Entity may play multiple roles but the relationship must be explicit per case/contract.
 
 External funder/bank native account numbers are ExternalReferences and sensitive payment destination references stay under Payments provider. No duplicate CP issuer master. Programme enrollment must not change CP global organisation status or take ownership of Trade's buyer/supplier master.
 
 ## 4. Trust and segregation
-CP context is bound to IAM verified actor/audience and operation; an arbitrary \`tenant_id\` query parameter or website domain is not proof. Carrier, buyer, supplier and funder get **different** case projections. Funder access to one obligation does not reveal unrelated suppliers, other bids, platform fee structure or competing funder terms. The sponsor may see approved programme metrics without invoice PDFs or other legal entities' receivable details. A parent may receive approved consolidated reports only with documented legal grounds and data-minimising aggregation.
+CP context is bound to IAM verified actor/audience and operation; an arbitrary `tenant_id` query parameter or website domain is not proof. Carrier, buyer, supplier and funder get **different** case projections. Funder access to one obligation does not reveal unrelated suppliers, other bids, platform fee structure or competing funder terms. The sponsor may see approved programme metrics without invoice PDFs or other legal entities' receivable details. A parent may receive approved consolidated reports only with documented legal grounds and data-minimising aggregation.
 
 ## 5. Onboarding journey
 ~~~mermaid
