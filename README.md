@@ -1,64 +1,47 @@
-<!-- Target path: baobab-platform/engine-template/README.md (becomes <new-repo>/README.md in any repo created from this template). -->
+# Baobab Supply Chain Finance (SCF)
 
-# <engine-repo-name>
+> **Status:** Foundation-0 scaffold + proposed architecture; no application runtime or production-ready capability.
 
-<!--
-  TODO before this repo's first real PR merges — then delete this comment block:
-  1. Replace the title above with the real repo name (e.g. `baobab-iam`), matching
-     the naming convention: short, hyphenated, no `-engine`/`-control-plane` suffix
-     (see baobab-platform/baobab-cp, baobab-platform/baobab-trade, baobab-platform/baobab-erp,
-     baobab-platform/baobab-pulse, baobab-platform/baobab-cms for precedent).
-  2. Replace ADR-000N below with the real ADR number recording this engine's
-     addition to the ecosystem. File it in baobab-platform/shared/docs/adr/, continuing
-     the existing sequence (see that repo's docs/adr/ for the next free number).
-  3. Fill in the "Role", "Ownership", and "Contract dependencies" sections below
-     with what's actually true for this engine — do not leave the placeholder
-     prose in place.
-  4. See TEMPLATE-USAGE.md in this repo's root for the full activation checklist
-     (CODEOWNERS, devcontainer, Foundation gates, branch protection) — do that
-     before writing application code, then delete that file too.
--->
+Baobab SCF is the proposed **headless, self-hosted, provider-neutral supply-chain-financing orchestration and evidence engine** for independently entitled legal entities, including ZuriBeans and Thamani.
 
-> **Status:** scaffolded, not yet built — see ADR-000N.
+See [ADR-SCF-0001](docs/adr/ADR-SCF-0001%20%E2%80%94%20Supply%20Chain%20Finance%20Mission%20Authority%20and%20Partner-Led%20Financing.md) (**Proposed**, not activated) for the domain and full implementation gates.
 
-## Role
+## What SCF is expected to own
 
-One paragraph: what this engine owns, in the ecosystem's own vocabulary — and,
-just as important, what it explicitly does *not* own (business logic that
-belongs to another engine, contracts that belong to `baobab-platform/shared`,
-infrastructure that belongs to `baobab-platform/infrastructure`). Model this on the
-"Role" section of an existing repo's README rather than writing it from
-scratch — see `baobab-platform/infrastructure`'s README for the shape.
+- FinancingCase identity, case progress, controlled workflow and audit.
+- References to authorised, pinned trade, financial, logistics and documentary evidence.
+- Funder programme and partner submission orchestration, offer response provenance and consent/acceptance coordination.
+- Conflicts, duplicate-prevention within Baobab's observable scope, reconcilable funding observations and exception handling.
 
-## Ownership
+## What SCF does not own
 
-This repository will contain:
+- Orders and commercial truth (Trade), invoices/GL/receivables (ERP), authoritative documents (Trade Docs), transport facts (TMS), or legal policy decisions (Regulations).
+- Authentication and trusted tenant/market/legal-entity context (IAM and Control Plane).
+- Credit decisions, regulated lending, issuance of legal assignments, actual disbursement, funds custody, payment settlement or general loan ledgers without separately approved authority.
 
-- TODO
-
-It must not contain:
-
-- TODO
+**Default model is partner-led financing:** qualified funders decide offers and authorised financial/payment systems record money movement. A financing case is not a loan or credit approval.
 
 ## Contract dependencies
 
-Note which `baobab-platform/shared` contracts this engine consumes or publishes
-(event schemas, API contracts, the Development Environment Contract), and at
-what pinned version/tag — e.g. `baobab-platform/shared@v1`. Do not commit to a
-contract here until it's actually confirmed; an empty scaffold doesn't need
-one yet.
+Cross-engine contracts and capability semantics are governed by [baobab-platform/shared](https://github.com/baobab-platform/shared). Current architecture references include:
 
-## Local development
+- `contracts/capability/v1/catalogue.yaml` and `namespace-registry.yaml`;
+- `contracts/cross-engine-reference/v1`;
+- `contracts/trade-document/v2`;
+- `contracts/regulatory-document-exchange/v1`.
 
-This repository uses the shared `baobab-dev` devcontainer image. See
-`.baobab/environment.yaml` for the declared profile and required
-capabilities, and `.devcontainer/devcontainer.json` for the pinned image tag.
+No SCF capability is claimed as catalogued, implemented, certified or resolvable. Canonical keys/events require a separate Shared review. A specific pinned Shared release/commit has not yet been selected for SCF application code.
 
-(Both of those are still `.example` files until this repo's language stack
-and `baobab-dev` profile are decided — see `TEMPLATE-USAGE.md`.)
+## Implementation direction (not yet selected/deployed)
 
-## Foundation status
+Reuse Baobab's existing runtime families. Python 3.14 / Django 6.0 / PostgreSQL 17 is a **candidate**, subject to SCF-TECH-01; a Go service is another same-stack option. API-first operation is required. Apache Fineract, a JVM-based financial core, is **not** a baseline dependency. No required SCF frontend.
 
-Foundation 0 (this scaffold: README, CODEOWNERS, branch protection) is
-complete. Foundation 1 (application code, real devcontainer/environment
-declaration, Foundation CI gates) has not started.
+The DevContainer/environment/repository YAML files remain examples until a real tech choice and Foundation-1 activation. No development or staging integration has been established by an ADR PR.
+
+## Delivery and readiness
+
+Start with the independent gates in ADR-SCF-0001: SCF-FND-00, SCF-TECH-01, SCF-DOM-01, SCF-CON-01, SCF-API-01, SCF-EVD-01, SCF-ADP-01, SCF-RSK-01, SCF-INT-01, SCF-OPS-01 and SCF-REL-01.
+
+First acceptance uses synthetic funds and a simulated funder. Real financing cannot be represented as active without validated legal, partner, contract, capability and operations proof.
+
+Security reports: [SECURITY.md](SECURITY.md). Contribution standards: [CONTRIBUTING.md](CONTRIBUTING.md).
